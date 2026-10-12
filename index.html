@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center px-4">
+
+    <div class="w-full max-w-lg bg-white/10 rounded-2xl p-8 text-center text-white">
+    <h1 class="text-3xl font-bold">Rock, Paper, Scissors</h1>
+    <p class="mt-2 text-white/80">Choose your move and see if you can beat the computer!</p>
+
+    <div class="mt-6 grid grid-cols-3 gap-3">
+        <div class="rounded-xl bg-blue-500/30 p-4">
+            <p class="text-sm">You</p>
+            <p id="player-score" class="text-3xl font-bold">0</p>
+        </div>
+        <div class="rounded-xl bg-white/10 p-4">
+            <p class="text-sm">Draws</p>
+            <p id="draw-score" class="text-3xl font-bold">0</p>
+        </div>
+        <div class="rounded-xl bg-red-500/30 p-4">
+            <p class="text-sm">Computer</p>
+            <p id="computer-score" class="text-3xl font-bold">0</p>
+        </div>
+    </div>
+
+    <h2 class="mt-8 text-xl font-semibold">Choose Your Move</h2>
+
+    <div class="mt-4 grid grid-cols-3 gap-3">
+        <button data-move="rock" class="move-button rounded-xl bg-white p-4 text-slate-900 transition hover:bg-blue-50">
+            <span class="block text-5xl">✊</span>
+            <span class="mt-2 block font-semibold">Rock</span>
+        </button>
+        <button data-move="paper" class="move-button rounded-xl bg-white p-4 text-slate-900 transition hover:bg-blue-50">
+            <span class="block text-5xl">✋</span>
+            <span class="mt-2 block font-semibold">Paper</span>
+        </button>
+        <button data-move="scissors" class="move-button rounded-xl bg-white p-4 text-slate-900 transition hover:bg-blue-50">
+            <span class="block text-5xl">✌️</span>
+            <span class="mt-2 block font-semibold">Scissors</span>
+        </button>
+    </div>
+
+    <div class="mt-6 rounded-xl bg-white/10 p-5">
+        <p id="choices-text" class="text-sm text-white/70"></p>
+        <p id="result-text" class="mt-1 text-lg font-semibold">Make a move to see the result!</p>
+    </div>
+
+    <button id="play-again-button" class="mt-6 rounded-xl bg-blue-500 px-8 py-3 font-semibold text-white transition hover:bg-blue-600">
+        Play Again
+    </button>
+</div>
+    
+    <script src="rps.js"></script>
+</body>
+</html>
